@@ -16,7 +16,7 @@ Migrations for 'job_application':
     - Create model Form
 ```
 * Now, code for migration is ready in job_application -> migrations -> 0001_initial.py
-* And, then run below to create tables in databse!:
+* And, then run below to create tables in database!:
 ```
 python3 manage.py migrate
 
@@ -29,9 +29,11 @@ Running migrations:
 
 ...
 ```
-## view the Form in browser when browsing the url by editing migrations -> views.py:
+## View the Form in browser when browsing the url by editing migrations -> views.py:
 * create "templates" directory in migrations folder and place html file to be used for view
 * create views.py which contains index function to call/request index.html
 * now, create file named urls.py containing urlpatterns path to be used and call our index.html in view
 * include this path also in mysite -> urls.py
 * NOW: refresh the browser to see the applied index.html on page! 
+
+## Now, we get the values of Form entered in browser. We edit  views.py for "post request"
