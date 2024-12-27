@@ -8,5 +8,5 @@ class Form(models.Model):
     date = models.DateField()
     occupation = models.CharField(max_length=80)
 
-    def __str__(self):    # this method will print string representaiton
+    def __str__(self):    # this method will print string re-presentaiton
         return f"{self.first_name} {self.last_name}"
