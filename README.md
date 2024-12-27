@@ -37,3 +37,22 @@ Running migrations:
 * NOW: refresh the browser to see the applied index.html on page! 
 
 ### Now, we get the values of Form entered in browser. We edit  views.py for "post request"
+* import Form from .models to access arguments (first_name, last_nane,...) and create (Form.objects.create(first_name=first_name,...)) them (store into database)
+
+### Send Email to the submitted user
+* adding module "from django.core.mail import EmailMessage" into views.py
+does the job!
+* Then specify sender (gmail settigs) in settings.py 
+
+### Add Admin Interface (Admin Panel) 
+* in job_application -> admin.py 
+from .module import Form and then admin.site.register(Form)
+* Then: http://127.0.0.1:8000/admin 
+* Create supper user admin account
+* python3 manage.py createsupperuser
+  (avakili -> G0dn...123)
+
+### Customize admin Interface
+* Create class like FormAdmin and add fields
+
+****

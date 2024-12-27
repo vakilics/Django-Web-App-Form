@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .forms import  ApplicationForm  # the forms module is locally and therefore we add "." before forms
 from .models import Form
 from django.contrib import messages
+from django.core.mail import EmailMessage
+
 
 def index(request):
     if request.method == "POST":
@@ -17,6 +19,10 @@ def index(request):
                                 email=email, date=date, occupation=occupation)
 
             #print(first_name)
+            message_body = f"A new job application was submitted. Thank you, \n{first_name} \n{last_name}"
+            email_message = EmailMessage("Form submission confirmation", message_body, to=[email])
+            email_message.send()
+
             messages.success(request, "Form submitted successfully!")
     return render(request, "index.html")
 
