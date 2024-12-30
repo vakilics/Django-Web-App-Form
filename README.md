@@ -55,4 +55,7 @@ from .module import Form and then admin.site.register(Form)
 ### Customize admin Interface
 * Create class like FormAdmin and add fields
 
-****
+
+### Create Base Template
+* we create base.htl as template and remove extra tags from other files
+
